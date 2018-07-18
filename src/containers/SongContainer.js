@@ -19,7 +19,7 @@ class SongContainer extends React.Component{
     const url = 'https://api.lyrics.ovh/v1/adele/hello';
     fetch(url)
     .then(response => response.json())
-    .then(lyrics => this.setState({lyrics: lyrics}))
+    .then(lyrics => this.setState({lyrics: lyrics.lyrics}))
 
     .catch(err => console.error(err));
   }
@@ -30,8 +30,13 @@ class SongContainer extends React.Component{
     return(
       <div>
         <h2>Select A Song!</h2>
-      
-        <Lyrics title={this.state.title} />
+
+        <Lyrics
+          title={this.state.title}
+          artist={this.state.artist}
+          lyrics={this.state.lyrics}
+        />
+
       </div>
     )
   }
