@@ -1,6 +1,7 @@
 import React from "react";
 // import Song from "../components/Song.js";
 import Lyrics from "../components/Lyrics.js";
+import Form from "../components/Form.js";
 
 
 
@@ -30,7 +31,7 @@ class SongContainer extends React.Component{
     return(
       <div>
         <h2>Select A Song!</h2>
-
+        <Form />
         <Lyrics
           title={this.state.title}
           artist={this.state.artist}
