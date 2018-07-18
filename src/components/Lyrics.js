@@ -6,9 +6,9 @@ class Lyrics extends React.Component{
   // const altTag = `${this.props.title} by ${this.props.artist} `;
 
    return (<div className = "lyrics">
-     <p>Lyrics:{this.props.lyrics}</p>
-     <p>Artist:{this.props.artist}</p>
-     <p>Title:{this.props.title}</p>
+     <p>Artist: {this.props.artist}</p>
+     <p>Title: {this.props.title}</p>
+     <p>Lyrics: {this.props.lyrics}</p>
      </div>)
  }
 

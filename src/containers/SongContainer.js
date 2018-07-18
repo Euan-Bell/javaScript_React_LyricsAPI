@@ -19,15 +19,15 @@ class SongContainer extends React.Component{
     }
   }
 
-  componentDidMount(){
-    console.log('componentDidMount');
-    const url = 'https://api.lyrics.ovh/v1/adele/hello';
-    fetch(url)
-    .then(response => response.json())
-    .then(lyrics => this.setState({lyrics: lyrics.lyrics}))
-
-    .catch(err => console.error(err));
-  }
+  // componentDidMount(){
+  //   console.log('componentDidMount');
+  //   const url = 'https://api.lyrics.ovh/v1/adele/hello';
+  //   fetch(url)
+  //   .then(response => response.json())
+  //   .then(lyrics => this.setState({lyrics: lyrics.lyrics}))
+  //
+  //   .catch(err => console.error(err));
+  // }
 
 
   handleSongSubmit(details){
@@ -36,7 +36,7 @@ class SongContainer extends React.Component{
     this.setState({artist: newArtist, title: newTitle})
 
     console.log('componentDidMount');
-    const url = `https://api.lyrics.ovh/v1/${newArtist}/${newTitle}`;
+    const url = `https://api.lyrics.ovh/v1/${ newArtist}/${ newTitle}`;
     fetch(url)
     .then(response => response.json())
     .then(lyrics => this.setState({lyrics: lyrics.lyrics}))
