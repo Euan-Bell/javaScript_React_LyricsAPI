@@ -1,5 +1,6 @@
 import React from "react";
-import Song from "../components/Song.js";
+// import Song from "../components/Song.js";
+import Lyrics from "../components/Lyrics.js";
 
 
 
@@ -25,14 +26,15 @@ class SongContainer extends React.Component{
 
 
 
-render(){
-  return(
-    <div>
-      <h2>Select A Song!</h2>
-      <Song />
-    </div>
-  )
-}
+  render(){
+    return(
+      <div>
+        <h2>Select A Song!</h2>
+      
+        <Lyrics title={this.state.title} />
+      </div>
+    )
+  }
 }
 
 export default SongContainer;
