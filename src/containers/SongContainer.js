@@ -29,6 +29,7 @@ render(){
   return(
     <div>
       <h2>Select A Song!</h2>
+      <Song />
     </div>
   )
 }
