@@ -8,9 +8,13 @@ import Form from "../components/Form.js";
 class SongContainer extends React.Component{
   constructor(props){
     super(props);
+    // this.handleArtistSubmit = this.handleArtistSubmit.bind(this)
+    // this.handleTitleSubmit = this.handleTitleSubmit.bind(this)
+    this.handleSongSubmit = this.handleSongSubmit.bind(this)
+
     this.state = {
-      artist: "Adele",
-      title: "Hello",
+      artist: "",
+      title: "",
       lyrics: ""
     }
   }
@@ -26,12 +30,36 @@ class SongContainer extends React.Component{
   }
 
 
+  handleSongSubmit(details){
+    const newArtist= details.artist
+    const newTitle= details.title
+    this.setState({artist: newArtist, title: newTitle})
+
+    console.log('componentDidMount');
+    const url = `https://api.lyrics.ovh/v1/${newArtist}/${newTitle}`;
+    fetch(url)
+    .then(response => response.json())
+    .then(lyrics => this.setState({lyrics: lyrics.lyrics}))
+
+    .catch(err => console.error(err));
+
+  }
+  // handleTitleSubmit(title){
+  //   const newTitle= this.state.title
+  //   this.setState({title: newTitle})
+  // }
+
+
 
   render(){
     return(
       <div>
         <h2>Select A Song!</h2>
-        <Form />
+        <Form
+          onSubmitSong={this.handleSongSubmit}
+          // onSubmitSong={this.handleArtistSubmit}
+          // onSubmitSong={this.handleTitleSubmit}
+        />
         <Lyrics
           title={this.state.title}
           artist={this.state.artist}
