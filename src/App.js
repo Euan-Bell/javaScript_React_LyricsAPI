@@ -5,10 +5,8 @@ import SongContainer from "./containers/SongContainer.js";
 class App extends Component {
   render() {
     return (
-
       <SongContainer />
     )
-
   }
 }
 
