@@ -49,7 +49,7 @@ class Form extends React.Component{
           value={this.state.title}
           onChange={this.handleTitleChange}
           />
-          <input type="submit" value="post"/>
+          <input type="submit" value="Find Me: Lyrics"/>
       </form>
     )
   }
