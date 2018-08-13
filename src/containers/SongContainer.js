@@ -26,6 +26,7 @@ class SongContainer extends React.Component{
     fetch(url)
     .then(response => response.json())
     .then(lyrics => this.setState({lyrics: lyrics.lyrics}))
+    
 
     .catch(err => console.error(err));
 
@@ -38,11 +39,11 @@ class SongContainer extends React.Component{
           onSubmitSong={this.handleSongSubmit}
         />
         <Lyrics
+
           title={this.state.title}
           artist={this.state.artist}
           lyrics={this.state.lyrics}
         />
-
       </div>
     )
   }
