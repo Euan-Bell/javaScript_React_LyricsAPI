@@ -6,7 +6,8 @@ class Lyrics extends React.Component{
    return (<div className = "lyrics">
      <p className="artist"> Artist: {this.props.artist}</p>
      <p>Title: {this.props.title}</p>
-     <p>Lyrics: {this.props.lyrics}</p>
+     <p>Lyrics:{this.props.lyrics}</p>
+
      </div>)
  }
 
