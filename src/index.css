@@ -40,39 +40,42 @@ div.lyrics.artist{
   text-align: center;
 }
 .logo{
-      display: block;
-     margin-left: auto;
-     margin-right: auto;
-     width: 50%;
-     height: 100%;
-     padding-top: 50px;
-     padding-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 10px;
 
 }
 
 .topnav{
-      position: absolute;
-      top: 0;
-      background-color: #087a85;
-      width: 100%;
-      height: auto;
-}
-
-.navLogo{
   position: absolute;
   top: 0;
-  left: 0;
+  background-color: #087a85;
+  width: 100%;
+  height: auto;
+}
+
+img.navLogo{
   display: block;
-  width: 220%;
-  height: 220%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  height: 100%;
+  margin-top: 50px;
+  margin-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 .topnav a {
-    float: right;
-    margin-right: 50px;
-    display: block;
-    color: #490a3d;
-    text-align: center;
-    padding: 14px 0px;
-    text-decoration: none;
+  float: right;
+  margin-right: 50px;
+  display: block;
+  color: #490a3d;
+  text-align: center;
+  padding: 14px 0px;
+  text-decoration: none;
 }
